@@ -10,9 +10,6 @@
           <li class="nav-item" v-if="isLoggedIn() && !onSaved()">
             <router-link class="nav-link" to="/saved_jobs">Your Workplaces</router-link>
           </li>
-          <!-- <li class="nav-item" v-if="isLoggedIn() && onSaved()">
-            <router-link class="nav-link" to="/">Back To Job Feed</router-link>
-          </li> -->
 
           <li class="nav-item" v-if="isLoggedIn()">
             <router-link class="nav-link" to="/logout">Logout</router-link>
@@ -21,6 +18,7 @@
             <router-link class="nav-link" to="/signup">Signup</router-link>
           </li>
         </ul>
+        <p v-if="isLoggedIn()">USER IS LOGGED IN</p>
       </div>
     </nav>
     <router-view />
