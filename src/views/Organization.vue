@@ -4,7 +4,7 @@
 
     <ul id="nav-mobile" class="right hide-on-med-and-down">
       <li class="nav-item">
-        <router-link class="nav-link" to="/">View Shifts</router-link>
+        <router-link class="nav-link" :to="`/organizations/${this.$route.params.id}/shifts`">View Shifts</router-link>
       </li>
       <li class="nav-item">
         <router-link class="nav-link" to="/">Edit</router-link>

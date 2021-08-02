@@ -1,5 +1,5 @@
 <template>
-  <div class="home container">
+  <div class="home container" v-if="isLoggedIn()">
     <ul v-for="organization in organizations" v-bind:key="organization.id">
       <p>{{ organization.name }}</p>
       <button v-on:click="joinOrganization(organization)">Join Org</button>
@@ -45,6 +45,9 @@ export default {
           this.errors = error.response.data.errors;
           console.log(this.errors);
         });
+    },
+    isLoggedIn: function () {
+      return localStorage.getItem("jwt");
     },
   },
 };
