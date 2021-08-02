@@ -58,7 +58,6 @@ export default {
         name: this.name,
         hourly_rate: this.hourly_rate,
       };
-
       axios
         .patch(`/organizations/${this.$route.params.id}`, params)
         .then((response) => {
